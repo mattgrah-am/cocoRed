@@ -1,0 +1,101 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights:
+Default: 400 
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights: 
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph: 1.6
+
+- Letter Spacing
+0.5px
+0.75px
+
+--- 02 COLORS
+- Primary: #922c2d
+- Darks:  #0f0404,
+- lights: #e9d5d5,
+
+--- 05 SHADOWS
+box-shadow: 
+
+--- 06 BORDER-RADIUS
+Default: 10px
+Medium: 12px
+
+--- 07 WHITESPACE
+- Spacing System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+--- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500&display=swap');
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1 rem = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    color: #0f0404;
+}
+
+header {
+    height: 9.6rem;
+    padding: 0 4.8rem;
+    background-color: #e9d5d5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.hero-section {
+    background-color: #e9d5d5;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 1.6rem;
+}
+
+.logo:link,
+.logo:visited {
+    text-decoration: none;
+    color: #0f0404;
+}
+
+.logo:hover,
+.logo:active {
+    color: #0f0404;
+}
+
+.link:link,
+.link:visited {
+    text-decoration: none;
+    color: #0f0404;
+}
+
+.link:hover,
+.link:active {
+    text-decoration: none;
+    color: #922c2d;
+}

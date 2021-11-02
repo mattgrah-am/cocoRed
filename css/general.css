@@ -44,19 +44,48 @@ Medium: 12px
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #922c2d;
+    --dark: #1d0909;
+    --light: #e9d5d5;
+}
+
 html {
     /* 1 rem = 10px */
     font-size: 62.5%;
 }
 
 body {
-    color: #0f0404;
+    color: var(--dark);
+    font-family: 'Lato', sans-serif;
+}
+
+.link:link,
+.link:visited {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.link:hover,
+.link:active {
+    text-decoration: none;
+    color: var(--primary);
 }
 
 header {
+    background: linear-gradient(0deg, #e9d5d5b0, #e9d5d580),
+        url('../assets/redhair2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    background-color: var(--light);
+}
+
+.header {
     height: 9.6rem;
     padding: 0 4.8rem;
-    background-color: #e9d5d5;
+    /* background-color: var(--light); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,11 +93,10 @@ header {
 
 nav ul {
     display: flex;
+    gap: 2rem;
     list-style: none;
-}
-
-.hero-section {
-    background-color: #e9d5d5;
+    font-size: 1.6rem;
+    text-transform: uppercase;
 }
 
 .logo {
@@ -80,22 +108,36 @@ nav ul {
 .logo:link,
 .logo:visited {
     text-decoration: none;
-    color: #0f0404;
+    color: var(--dark);
 }
 
 .logo:hover,
 .logo:active {
-    color: #0f0404;
+    color: var(--dark);
 }
 
-.link:link,
-.link:visited {
-    text-decoration: none;
-    color: #0f0404;
+.hero-section {
+    /* background-color: var(--light); */
+    padding: 4.8rem 0 9.6rem 0;
 }
 
-.link:hover,
-.link:active {
-    text-decoration: none;
-    color: #922c2d;
+.hero {
+    width: 120rem;
+    margin: 0 auto;
+    height: 30rem;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+}
+
+.hero-description {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.hero-img {
+    width: 100%;
 }

@@ -46,9 +46,9 @@ Medium: 12px
 
 :root {
     --primary: #922c2d;
-    --dark: #1d0909;
-    --light: #e9d5d5;
-    --lightopp: hsla(0, 31%, 87%, 0.75);
+    --dark: #111;
+    --light: #eee;
+    --lightopp: hsla(0, 100%, 100%, 0.5);
     --primaryopp: hsla(359, 54%, 37%, 0.75);
 }
 
@@ -60,6 +60,14 @@ html {
 body {
     color: var(--dark);
     font-family: 'Lato', sans-serif;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+    color: var(--dark);
 }
 
 .link:link,
@@ -74,29 +82,16 @@ body {
     color: var(--primary);
 }
 
-header {
-    background-image: url(../assets/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
+.link-dark:link,
+.link-dark:visited {
+    text-decoration: none;
+    color: var(--light);
 }
 
-.header {
-    height: 9.6rem;
-    padding: 0 4.8rem;
-    /* background-color: var(--light); */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.6rem;
-    text-transform: uppercase;
+.link-dark:hover,
+.link-dark:active {
+    text-decoration: none;
+    color: var(--primary);
 }
 
 .bold {
@@ -107,17 +102,38 @@ nav ul {
     font-weight: 300;
 }
 
-.marright20 {
-    margin-right: 2rem;
+.marr24 {
+    margin-right: 2.4rem;
 }
 
-.marbot96 {
+.marb96 {
     margin-bottom: 9.6rem;
+}
+
+.marb48 {
+    margin-bottom: 4.8rem;
+}
+
+header {
+    background-image: url(../assets/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    height: 100vh;
+}
+
+.header {
+    height: 9.6rem;
+    padding: 0 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 3.6rem;
     letter-spacing: 1.6rem;
 }
 
@@ -132,9 +148,18 @@ nav ul {
     color: var(--dark);
 }
 
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
 .hero-section {
-    /* background-color: var(--light); */
-    padding: 12.8rem 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .hero {
@@ -156,18 +181,36 @@ nav ul {
 .heading-secondary {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.4rem;
-    letter-spacing: 1rem;
+    letter-spacing: 0.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.dark-banner {
+    background-color: var(--dark);
+    color: var(--light);
+    display: inline-block;
+    padding: 0.6rem 1.6rem;
+    margin-top: 2rem;
+}
+
+.light-banner {
+    background-color: var(--light);
+    color: var(--dark);
+    display: inline-block;
+    padding: 0.6rem 1.6rem;
+    margin-top: 2rem;
 }
 
 .heading-tertiary {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    letter-spacing: 0.6rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 1.6rem;
 }
 
 .heading-cta:link,
 .heading-cta:visited {
-    background-color: var(--primary);
+    background-color: var(--dark);
     color: var(--light);
     display: inline-block;
     padding: 0.6rem 1.6rem;
@@ -178,18 +221,19 @@ nav ul {
 
 .heading-cta:hover,
 .heading-cta:active {
-    background-color: var(--dark);
+    background-color: var(--primary);
     color: var(--light);
     text-decoration: none;
 }
 
-main {
+.container {
     width: 120rem;
     margin: 0 auto;
 }
 
 .about-section {
-    margin: 4.8rem 0 9.6rem 0;
+    padding-top: 4.8rem;
+    margin-bottom: 9.6rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
@@ -206,4 +250,69 @@ main {
 
 .about-vanessa {
     padding: 1.2rem;
+}
+
+.profile-img {
+    width: 100%;
+    box-shadow: 0 0 0 2px var(--dark);
+}
+
+.services-section,
+.gallery-section {
+    padding: 4.8rem;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.services-section p {
+    color: var(--light);
+}
+
+.services {
+    display: flex;
+    gap: 4.8rem;
+}
+
+.pricing-section {
+    padding-top: 4.8rem;
+    margin-bottom: 9.6rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border-top: 1px solid var(--dark);
+    padding: 1.6rem 0;
+}
+
+.row-end {
+    border-bottom: 1px solid var(--dark);
+}
+
+.title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.price {
+    font-size: 2.4rem;
+    font-weight: 300;
+    align-self: center;
+    justify-self: end;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.gallery-img img {
+    width: 100%;
+    box-shadow: 0 0 0 2px var(--light);
 }
